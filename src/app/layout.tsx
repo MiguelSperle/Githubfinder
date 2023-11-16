@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import StyledComponentsProvider from '@/providers/StyledComponentsProvider'
+import StyledComponentsProvider from '@/providers/styledComponentsProvider'
 import { Inter } from 'next/font/google'
 import { ProviderThemeContext } from '@/context/ThemeContext'
 import { ReactQueryProvider } from '@/providers/ReactQueryProvider'

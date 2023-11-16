@@ -3,7 +3,7 @@ import { UserProps } from '@/@types'
 import Typography from '@/components/Typography'
 import Image from 'next/image'
 
-export default function Profile({ user }: UserProps) {
+export default function UserCard({ user }: UserProps) {
   return (
     <Styled.ContainerProfile>
       <Image

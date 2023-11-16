@@ -3,9 +3,8 @@ import * as Styled from './styles'
 import Typography from '@/components/Typography'
 import { useRepositoriesUsers } from '@/hooks/useGetRepositories'
 import Link from 'next/link'
-import Loading from '@/components/Loading/Loading'
 
-export default function Repositories({ user }: UserProps) {
+export default function UserRepositories({ user }: UserProps) {
   const { data, isLoading } = useRepositoriesUsers({ user })
 
   return (
@@ -15,7 +14,7 @@ export default function Repositories({ user }: UserProps) {
 
         <Styled.ContainerOnlyRepositories>
           {isLoading ? (
-            <Loading />
+            <Typography text="Loading..." fontSize="1rem" />
           ) : data && data.length > 0 ? (
             data.map((repositories: RepositoriesType) => (
               <Styled.ContainerRepository key={repositories.id}>

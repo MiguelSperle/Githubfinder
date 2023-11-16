@@ -5,34 +5,20 @@ import * as Styled from './styles'
 import { HiChevronLeft, HiOutlineSun, HiOutlineMoon } from 'react-icons/hi'
 import { AuthContextTheme } from '@/context/ThemeContext'
 import { useContext } from 'react'
-import { useGetUsers } from '@/hooks/useGetUsers'
-import { nameProps } from '@/@types/index'
-import Profile from '@/components/cards/profile/Profile'
-import Stats from '@/components/cards/stats/Stats'
-import Repositories from '@/components/cards/repository/Repository'
-import NotFound from '@/app/notFoundUser/not-found'
+import UserCard from './userCard/user-card'
+import UserStats from './userStats/user-stats'
+import UserRepositories from './userRespositories/user-repositories'
 import { deleteCookie } from 'cookies-next'
-import Loading from '@/components/Loading/Loading'
 import Link from 'next/link'
+import { UserType } from '@/@types'
 
-export default function ProfileUser({ params }: nameProps) {
+export default function ProfileInformation({ data }: { data: UserType }) {
   const { lightTheme, handleReplaceTheme } = useContext(AuthContextTheme)
-
-  const { data, isLoading } = useGetUsers({ params })
-
-  if (isLoading) {
-    return <Loading />
-  }
-
-  if (!data) {
-    return NotFound()
-  }
 
   return (
     <Styled.ContainerPageUser>
       <Styled.ContainerButtonBack>
         <Link href="/">
-          {' '}
           <Button
             width="50px"
             height="50px"
@@ -57,11 +43,11 @@ export default function ProfileUser({ params }: nameProps) {
       </Styled.ContainerButtonBack>
       <Styled.ContainerSecondPageUser>
         <Styled.ContainerInformation>
-          <Profile user={data} />
+          <UserCard user={data} />
 
           <Styled.ContainerInformationProfileRepositories>
-            <Stats user={data} />
-            <Repositories user={data} />
+            <UserStats user={data} />
+            <UserRepositories user={data} />
           </Styled.ContainerInformationProfileRepositories>
         </Styled.ContainerInformation>
       </Styled.ContainerSecondPageUser>

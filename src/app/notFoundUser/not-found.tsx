@@ -1,3 +1,5 @@
+'use client'
+
 import * as Styled from './styles'
 import Link from 'next/link'
 import { HiChevronLeft } from 'react-icons/hi'

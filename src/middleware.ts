@@ -9,7 +9,7 @@ export function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname.replace(/^\/+|\/+$/g, '') // Remove barras extras no início ou no final.
 
   // Verifica se o usuário está tentando acessar um perfil específico, esse (STARTSWITH) vefificar se o path começa com (profile/).
-  if (path.startsWith('profile/')) {
+  if (path.startsWith('user/')) {
     const urlUserName = path.split('/')[1] // Obtém apenas o nome do usuario.
 
     // Verifica se o usuário está tentando acessar o próprio perfil.
@@ -34,6 +34,6 @@ export function middleware(request: NextRequest) {
 export const config = {
   // intercptando essa rota
   matcher:
-    '/profile/:path*' /* a rota da minha aplicação que para que o usuario acesse, ele tem que ter o cookie salvo,
+    '/user/:path*' /* a rota da minha aplicação que para que o usuario acesse, ele tem que ter o cookie salvo,
   nesse caso essa função será chamada qualquer vez que usuario tentar acessar a rota(profile/...) */,
 }

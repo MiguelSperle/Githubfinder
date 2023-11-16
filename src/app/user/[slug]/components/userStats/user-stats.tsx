@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Typography from '@/components/Typography'
 import Image from 'next/image'
 
-export default function Stats({ user }: UserProps) {
+export default function UserStats({ user }: UserProps) {
   const created = new Date(user?.created_at || '')
   const date = created.toLocaleString()
 

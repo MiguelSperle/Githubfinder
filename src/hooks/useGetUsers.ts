@@ -1,3 +1,5 @@
+'use client'
+
 import { useQuery } from '@tanstack/react-query'
 import { GetUsersService } from '@/service/GetUsersGithub'
 import { ApiErrorType, nameProps } from '@/@types/index'
