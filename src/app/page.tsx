@@ -1,95 +1,128 @@
+'use client'
+
+import * as Styled from '../app/styles'
+import Typography from '@/components/Typography'
 import Image from 'next/image'
-import styles from './page.module.css'
+import github from '../assets/github.png'
+import InputWidget from '@/components/InputWidget'
+import Button from '@/components/Button'
+import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi'
+import { useContext, useState } from 'react'
+import { AuthContextTheme } from '@/context/ThemeContext'
+import { useRouter } from 'next/navigation'
+import { setCookie } from 'cookies-next'
 
 export default function Home() {
+  const { handleReplaceTheme, lightTheme } = useContext(AuthContextTheme)
+
+  const router = useRouter()
+
+  const [user, setUser] = useState<string>('')
+
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+    setUser(event.target.value)
+  }
+
+  function findUser() {
+    if (user === '') {
+      return alert('Please enter a username to search')
+    }
+
+    setCookie('saveUser', user)
+    return router.push(`/profile/${user}`)
+  }
+
+  // function findUserOnKeyEnter(event: React.KeyboardEvent<HTMLInputElement>) {
+  //   if (event.key === 'Enter') {
+  //     if (user === '') {
+  //       return alert('Please enter a username to search')
+  //     } else {
+  //       setCookie('saveInputText', user)
+  //       return router.push(`/profile/${user}`)
+  //     }
+  //   }
+  // }
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <Styled.ContainerHome>
+      <Styled.ContainerSecondHome>
+        <Styled.BoxTypography>
+          <Typography
+            text="Github Finder"
+            fontSize="3.5rem"
+            fontWeight="300"
+            className="name-main"
+          />
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              textAlign: 'justify',
+            }}
+            className="boxText"
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+            <Typography
+              text="Enter path the user ex: "
+              fontSize="0.9rem"
+              fontWeight="200"
             />
-          </a>
-        </div>
-      </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+            <div style={{ display: 'flex', flexDirection: 'row' }}>
+              <Typography
+                text="github.com/"
+                fontSize="0.9rem"
+                fontWeight="200"
+              />
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+              <span style={{ color: '#006dff', fontWeight: 300 }}>
+                MiguelSperle
+              </span>
+            </div>
+          </div>
+          <Styled.BoxSearch>
+            <InputWidget
+              type="type"
+              width="250px"
+              height="54px"
+              fontSize="1.25rem"
+              placeholder="Ex: MiguelSperle"
+              className="input-widget"
+              onChange={handleChange}
+              // onKeyDown={findUserOnKeyEnter}
+            />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+            <Button
+              type="submit"
+              width="150px"
+              height="50px"
+              fontSize="1.125rem"
+              className="button-find"
+              onClick={findUser}
+            >
+              Find
+            </Button>
+          </Styled.BoxSearch>
+        </Styled.BoxTypography>
+        <Styled.ContainerImageButton>
+          <Button
+            type="submit"
+            width="70px"
+            height="50px"
+            fontSize="1.25rem"
+            className="button-change-theme"
+            onClick={handleReplaceTheme}
+          >
+            {lightTheme ? <HiOutlineSun /> : <HiOutlineMoon />}
+          </Button>
+          <Image
+            className="image-main"
+            width={600}
+            height={600}
+            src={github}
+            alt=""
+          />
+        </Styled.ContainerImageButton>
+      </Styled.ContainerSecondHome>
+    </Styled.ContainerHome>
   )
 }
