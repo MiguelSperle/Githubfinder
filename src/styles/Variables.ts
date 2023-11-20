@@ -84,19 +84,4 @@ export const theme = {
       '6xl': '4rem', // 64px
     },
   },
-
-  //   default: {
-  //     white: '#fff',
-  //     black: '#000',
-  //   },
-  //   text: {
-  //     primary: '#333333',
-  //     secondary: '#f1f1f1',
-  //   },
-  //   background: {
-  //     primary: '#ffffff',
-  //     secondary: '#1d2024',
-  //     third: '#ececec',
-  //   },
-  // },
 }

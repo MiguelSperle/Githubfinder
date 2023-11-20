@@ -8,31 +8,27 @@ export const BoxTypography = styled.div`
   justify-content: center;
   gap: 2rem;
 
-  @media screen and (min-width: 1025px) and (max-width: 1200px) {
-    .boxText {
-      align-items: center;
-    }
-  }
-
   @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .boxText {
-      align-items: center;
+    align-items: center;
+
+    .name-main {
+      font-size: 3.5rem;
     }
   }
 
   @media screen and (min-width: 481px) and (max-width: 768px) {
-    .boxText {
-      align-items: center;
+    align-items: center;
+
+    .name-main {
+      font-size: 2.5rem;
     }
   }
 
   @media screen and (min-width: 320px) and (max-width: 480px) {
-    .name-main {
-      font-size: 2.25rem;
-    } // teste
+    align-items: center;
 
-    .boxText {
-      align-items: center;
+    .name-main {
+      font-size: 2.125rem;
     }
   }
 `
@@ -54,7 +50,8 @@ export const BoxSearch = styled.div`
     padding-left: 1rem;
     outline: none;
     border: none;
-    border-bottom: 1px solid;
+    border-bottom: 2px solid
+      ${({ theme }) => theme.colors.borderColor.secondary};
 
     &::placeholder {
       font-size: ${({ theme }) => theme.fontSizes.xs};

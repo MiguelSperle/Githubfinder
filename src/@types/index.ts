@@ -1,4 +1,4 @@
-export interface nameProps {
+export interface NameProps {
   params: {
     slug: string
   }
@@ -17,16 +17,12 @@ export interface UserType {
   created_at: string
 }
 
-export interface UserProps {
-  user: UserType | null
-}
-
 export interface RepositoriesType {
   id: number
   name: string
   svn_url: string
 }
 
-export interface ApiErrorType {
-  message: string
+export interface UserProps {
+  user: UserType | null
 }

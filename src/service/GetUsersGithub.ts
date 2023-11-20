@@ -1,7 +1,7 @@
-import { api } from './GenericService'
-import { nameProps } from '@/@types/index'
+import { api } from './genericService'
+import { NameProps } from '@/@types'
 
-const GetService = async ({ params }: nameProps) => {
+const GetService = async ({ params }: NameProps) => {
   const response = await api.get(`/${params.slug}`)
   return response.data
 }

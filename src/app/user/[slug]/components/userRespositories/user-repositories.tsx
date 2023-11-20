@@ -1,11 +1,13 @@
 import { RepositoriesType, UserProps } from '@/@types'
-import * as Styled from './styles'
-import Typography from '@/components/Typography'
-import { useRepositoriesUsers } from '@/hooks/useGetRepositories'
+import * as Styled from '../userRespositories/styles'
+import Typography from '@/components/typography'
 import Link from 'next/link'
+import { GetRepositoriesService } from '@/service/getRepositoriesGithub'
 
-export default function UserRepositories({ user }: UserProps) {
-  const { data, isLoading } = useRepositoriesUsers({ user })
+export default async function UserRepositories({ user }: UserProps) {
+  const repos = await GetRepositoriesService.GetService({
+    user,
+  })
 
   return (
     <Styled.ContainerRepositories>
@@ -13,10 +15,8 @@ export default function UserRepositories({ user }: UserProps) {
         <Typography text="Repositories" fontSize="2rem" />
 
         <Styled.ContainerOnlyRepositories>
-          {isLoading ? (
-            <Typography text="Loading..." fontSize="1rem" />
-          ) : data && data.length > 0 ? (
-            data.map((repositories: RepositoriesType) => (
+          {repos && repos.length > 0 ? (
+            repos.map((repositories: RepositoriesType) => (
               <Styled.ContainerRepository key={repositories.id}>
                 <Typography text={repositories.name} fontSize="0.8rem" />
                 <Link href={repositories.svn_url} target="_blank">
@@ -25,7 +25,7 @@ export default function UserRepositories({ user }: UserProps) {
               </Styled.ContainerRepository>
             ))
           ) : (
-            <Typography text="No repositories found." fontSize="1rem" />
+            <Typography text="Don't have repositories" fontSize="0.875rem" />
           )}
         </Styled.ContainerOnlyRepositories>
       </Styled.ContainerSecondRepositories>

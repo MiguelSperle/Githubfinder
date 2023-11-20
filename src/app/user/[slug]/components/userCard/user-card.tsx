@@ -1,6 +1,6 @@
-import * as Styled from './styles'
+import * as Styled from '../userCard/styles'
 import { UserProps } from '@/@types'
-import Typography from '@/components/Typography'
+import Typography from '@/components/typography'
 import Image from 'next/image'
 
 export default function UserCard({ user }: UserProps) {

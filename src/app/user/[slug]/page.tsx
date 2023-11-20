@@ -1,27 +1,49 @@
-import { nameProps } from '@/@types/index'
-import NotFound from '@/app/notFoundUser/not-found'
-import ProfileInformation from './components/profile-information'
-import { GetUsersService } from '@/service/GetUsersGithub'
+import { GetUsersService } from '@/service/getUsersGithub'
+import { NameProps } from '@/@types'
+import { Suspense } from 'react'
+import Loading from './components/loading/loading'
+import * as Styled from './styles'
+import HeaderTheme from './components/headerTheme/header-theme'
+import UserCard from './components/userCard/user-card'
+import UserStats from './components/userStats/user-stats'
+import UserRepositories from './components/userRespositories/user-repositories'
+import { AxiosError } from 'axios'
+import Error from '@/app/_error'
+import Custom404 from './404'
 
-export default async function User({ params }: nameProps) {
-  // const { data, isLoading } = useGetUsers({ params })
+export default async function User({ params }: NameProps) {
+  let user
 
-  const user = await GetUsersService.GetService({
-    params: { slug: params.slug },
-  })
+  try {
+    user = await GetUsersService.GetService({
+      params: { slug: params.slug },
+    })
+  } catch (error: any) {
+    const axiosError = error as AxiosError
+    const errorCode = axiosError.response ? axiosError.response.status : false
 
-  // em dúvida ainda se uso axios ou fetch
-
-  const response = await fetch(`https://api.github.com/users/${params.slug}`)
-  const userFetch = await response.json()
-
-  // if (isLoading) {
-  //   return <Loading />
-  // }
-
-  if (!user) {
-    return NotFound()
+    if (errorCode === 404) {
+      return <Custom404 />
+    } else {
+      return <Error statusCode={errorCode} />
+    }
   }
 
-  return <ProfileInformation data={user} />
+  return (
+    <Styled.ContainerPageUser>
+      <Suspense fallback={<Loading />}>
+        <HeaderTheme />
+        <Styled.ContainerSecondPageUser>
+          <Styled.ContainerInformation>
+            <UserCard user={user} />
+
+            <Styled.ContainerInformationProfileRepositories>
+              <UserStats user={user} />
+              <UserRepositories user={user} />
+            </Styled.ContainerInformationProfileRepositories>
+          </Styled.ContainerInformation>
+        </Styled.ContainerSecondPageUser>
+      </Suspense>
+    </Styled.ContainerPageUser>
+  )
 }

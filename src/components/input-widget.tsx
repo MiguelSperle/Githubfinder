@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import styled from 'styled-components'
 
@@ -9,6 +11,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 const InputComponent = styled.input<InputProps>`
+  // Esse inherit é se casos não passe nada, deixar o valor padrão
   font-size: ${({ fontSize }) => fontSize ?? 'inherit'};
   background: ${({ background }) => background ?? 'inherit'};
   height: ${({ height }) => height ?? 'inherit'};

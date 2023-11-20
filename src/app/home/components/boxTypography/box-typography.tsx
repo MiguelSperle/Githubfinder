@@ -4,7 +4,7 @@ import Button from '@/components/button'
 import InputWidget from '@/components/input-widget'
 import Typography from '@/components/typography'
 import * as Styled from '../boxTypography/styles'
-import { setCookie } from 'cookies-next'
+import Cookies from 'js-cookie'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
@@ -22,7 +22,7 @@ export default function BoxTypography() {
       return alert('Please enter a username to search')
     }
 
-    setCookie('saveUser', user)
+    Cookies.set('saveUser', user)
     return router.push(`/user/${user}`)
   }
 
@@ -31,7 +31,7 @@ export default function BoxTypography() {
       if (user === '') {
         return alert('Please enter a username to search')
       } else {
-        setCookie('saveUser', user)
+        Cookies.set('saveUser', user)
         return router.push(`/user/${user}`)
       }
     }

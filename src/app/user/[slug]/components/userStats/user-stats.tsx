@@ -1,7 +1,7 @@
 import { UserProps } from '@/@types'
-import * as Styled from './styles'
+import * as Styled from '../userStats/styles'
 import Link from 'next/link'
-import Typography from '@/components/Typography'
+import Typography from '@/components/typography'
 import Image from 'next/image'
 
 export default function UserStats({ user }: UserProps) {

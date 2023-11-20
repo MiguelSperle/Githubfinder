@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import styled from 'styled-components'
 
@@ -9,6 +11,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const ButtonComponent = styled.button<ButtonProps>`
+  // Esse inherit é se casos não passe nada, deixar o valor padrão
   font-size: ${({ fontSize }) => fontSize ?? 'inherit'};
   height: ${({ height }) => height ?? 'inherit'};
   width: ${({ width }) => width ?? 'inherit'};

@@ -1,5 +1,5 @@
 import { UserProps } from '@/@types'
-import { api } from './GenericService'
+import { api } from './genericService'
 
 const GetService = async ({ user }: UserProps) => {
   const response = await api.get(`/${user?.login}/repos`)

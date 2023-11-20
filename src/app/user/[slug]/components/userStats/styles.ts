@@ -14,6 +14,7 @@ export const ContainerStats = styled.div`
 
   .stats-user {
     height: auto;
+
     @media screen and (min-width: 1201px) {
       width: 420px;
     }

@@ -1,15 +1,14 @@
 'use client'
 
-import Button from '@/components/Button'
+import Button from '@/components/button'
 import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi'
 import * as Styled from '../imageButton/styles'
 import Image from 'next/image'
 import github from '../../../../assets/github.png'
-import { useContext } from 'react'
-import { AuthContextTheme } from '@/context/ThemeContext'
+import { useContextTheme } from '@/context/theme/context'
 
 export default function ImageButton() {
-  const { handleReplaceTheme, lightTheme } = useContext(AuthContextTheme)
+  const { lightTheme, ThemeSwitcher } = useContextTheme()
 
   return (
     <Styled.ContainerImageButton>
@@ -19,7 +18,7 @@ export default function ImageButton() {
         height="50px"
         fontSize="1.25rem"
         className="button-change-theme"
-        onClick={handleReplaceTheme}
+        onClick={ThemeSwitcher}
       >
         {lightTheme ? <HiOutlineSun /> : <HiOutlineMoon />}
       </Button>
@@ -28,7 +27,7 @@ export default function ImageButton() {
         width={600}
         height={600}
         src={github}
-        alt=""
+        alt="image-main-github"
       />
     </Styled.ContainerImageButton>
   )
