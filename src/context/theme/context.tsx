@@ -1,6 +1,6 @@
 import { createContext, useState, useContext } from 'react'
-import { setLocalStorage } from '@/utils/functions/localStorage/setLocalStorage'
-import { getLocalStorage } from '@/utils/functions/localStorage/getLocalStorage'
+import { setLocalStorage } from '@/utils/functions/localStorage/SetLocalStorage'
+import { getLocalStorage } from '@/utils/functions/localStorage/GetLocalStorage'
 
 interface PropsContextTheme {
   lightTheme: boolean

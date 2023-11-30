@@ -1,8 +1,8 @@
 'use client'
 
-import Button from '@/components/button'
+import Button from '@/components/Button'
 import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi'
-import * as Styled from '../imageButton/styles'
+import * as Styled from '../imageButton/Styles'
 import Image from 'next/image'
 import github from '../../../../assets/github.png'
 import { useContextTheme } from '@/context/theme/context'
@@ -12,7 +12,7 @@ export default function ImageButton() {
 
   return (
     <Styled.ContainerImageButton>
-      {/* <Button
+      <Button
         type="submit"
         width="70px"
         height="50px"
@@ -21,7 +21,7 @@ export default function ImageButton() {
         onClick={ThemeSwitcher}
       >
         {lightTheme ? <HiOutlineSun /> : <HiOutlineMoon />}
-      </Button> */}
+      </Button>
       <Image
         className="image-main"
         width={600}

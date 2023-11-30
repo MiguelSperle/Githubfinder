@@ -1,7 +1,7 @@
 import { UserPropsType } from '@/@types'
-import * as Styled from '../userStats/styles'
+import * as Styled from '../userStats/Styles'
 import Link from 'next/link'
-import Typography from '@/components/typography'
+import Typography from '@/components/Typography'
 import Image from 'next/image'
 
 export default function UserStats({ user }: UserPropsType) {
@@ -19,11 +19,11 @@ export default function UserStats({ user }: UserPropsType) {
           target="_blank"
         >{`github.com/${user?.login}`}</Link>
 
-        {/* <Typography text={user?.name} fontSize="1.5rem" />
+        <Typography text={user?.name} fontSize="1.5rem" />
         <Typography text={user?.bio} fontSize="0.8rem" />
         <Typography text={`Followers: ${user?.followers}`} fontSize="0.8rem" />
         <Typography text={`Following: ${user?.following}`} fontSize="0.8rem" />
-        <Typography text={`Created: ${date}`} fontSize="0.8rem" /> */}
+        <Typography text={`Created: ${date}`} fontSize="0.8rem" />
       </Styled.ContainerInfoUser>
 
       <Image

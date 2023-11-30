@@ -1,4 +1,4 @@
-import { ForbiddenException } from '@/utils/exceptions/exceptions'
+import { ForbiddenException } from '@/utils/exceptions/Exceptions'
 import { redirect } from 'next/navigation'
 
 export async function FetchUser(name: string) {

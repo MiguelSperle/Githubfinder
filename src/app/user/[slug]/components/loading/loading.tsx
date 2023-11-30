@@ -1,4 +1,4 @@
-import * as Styled from '../loading/styles'
+import * as Styled from '../loading/Styles'
 
 export default function Loading() {
   return (

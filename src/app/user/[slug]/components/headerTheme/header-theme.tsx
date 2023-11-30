@@ -1,9 +1,9 @@
 'use client'
 
-import Button from '@/components/button'
+import Button from '@/components/Button'
 import Link from 'next/link'
 import { HiChevronLeft, HiOutlineSun, HiOutlineMoon } from 'react-icons/hi'
-import * as Styled from '../headerTheme/styles'
+import * as Styled from '../headerTheme/Styles'
 import { useContextTheme } from '@/context/theme/context'
 
 export default function HeaderTheme() {
@@ -12,17 +12,17 @@ export default function HeaderTheme() {
   return (
     <Styled.ContainerButtonBack>
       <Link href="/">
-        {/* <Button
+        <Button
           width="50px"
           height="50px"
           fontSize="1.5rem"
           className="button-chevron-left"
         >
           <HiChevronLeft />
-        </Button> */}
+        </Button>
       </Link>
 
-      {/* <Button
+      <Button
         type="submit"
         width="50px"
         height="50px"
@@ -31,7 +31,7 @@ export default function HeaderTheme() {
         onClick={ThemeSwitcher}
       >
         {lightTheme ? <HiOutlineSun /> : <HiOutlineMoon />}
-      </Button> */}
+      </Button>
     </Styled.ContainerButtonBack>
   )
 }

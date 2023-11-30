@@ -1,9 +1,9 @@
 'use client'
 
-import Button from '@/components/button'
-import InputWidget from '@/components/input-widget'
-import Typography from '@/components/typography'
-import * as Styled from '../boxTypography/styles'
+import Button from '@/components/Button'
+import InputWidget from '@/components/Input-Widget'
+import Typography from '@/components/Typography'
+import * as Styled from '../boxTypography/Styles'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
@@ -36,13 +36,12 @@ export default function BoxTypography() {
 
   return (
     <Styled.BoxTypography>
-      <p>Github Finder</p>
-      {/* <Typography
+      <Typography
         text="Github Finder"
         fontSize="3.5rem"
         fontWeight="300"
         className="name-main"
-      /> */}
+      />
       <div
         style={{
           display: 'flex',
@@ -51,16 +50,14 @@ export default function BoxTypography() {
         }}
         className="boxText"
       >
-        <p>Enter path the user ex: </p>
-        {/* <Typography
+        <Typography
           text="Enter path the user ex: "
           fontSize="0.9rem"
           fontWeight="200"
-        /> */}
+        />
 
         <div style={{ display: 'flex', flexDirection: 'row' }}>
-          <p>github.com/</p>
-          {/* <Typography text="github.com/" fontSize="0.9rem" fontWeight="200" /> */}
+          <Typography text="github.com/" fontSize="0.9rem" fontWeight="200" />
 
           <span style={{ color: '#006dff', fontWeight: 300 }}>
             MiguelSperle
@@ -68,8 +65,7 @@ export default function BoxTypography() {
         </div>
       </div>
       <Styled.BoxSearch>
-        <input type="text" className="input-widget" />
-        {/* <InputWidget
+        <InputWidget
           type="type"
           width="250px"
           height="54px"
@@ -78,11 +74,9 @@ export default function BoxTypography() {
           className="input-widget"
           onChange={handleChange}
           onKeyDown={findUserOnKeyEnter}
-        /> */}
-        <button type="submit" className="button-find">
-          find
-        </button>
-        {/* <Button
+        />
+
+        <Button
           type="submit"
           width="150px"
           height="50px"
@@ -91,7 +85,7 @@ export default function BoxTypography() {
           onClick={findUser}
         >
           Find
-        </Button> */}
+        </Button>
       </Styled.BoxSearch>
     </Styled.BoxTypography>
   )

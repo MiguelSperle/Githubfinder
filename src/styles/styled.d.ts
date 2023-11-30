@@ -1,4 +1,4 @@
-import { theme } from './variables'
+import { theme } from './Variables'
 
 type Colors = typeof theme.darkTheme.colors
 type BreakPoints = typeof theme.darkTheme.breakPoints
