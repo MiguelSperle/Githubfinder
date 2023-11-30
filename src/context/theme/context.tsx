@@ -21,15 +21,15 @@ export const ContextThemeProvider = ({
 }: {
   children: React.ReactNode
 }) => {
+  const [lightTheme, setLightTheme] = useState<boolean>(
+    getLocalStorage('saveTheme') === 'true',
+  )
+
   function ThemeSwitcher() {
     const valueTheme = !lightTheme
     setLightTheme(valueTheme)
     setLocalStorage('saveTheme', valueTheme.toString())
   }
-
-  const [lightTheme, setLightTheme] = useState<boolean>(
-    getLocalStorage('saveTheme') === 'true',
-  )
 
   return (
     <AuthContextTheme.Provider
