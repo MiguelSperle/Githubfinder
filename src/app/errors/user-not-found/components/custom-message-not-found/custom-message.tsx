@@ -1,9 +1,3 @@
-import Button from '@/components/Button'
-import Typography from '@/components/Typography'
-import Link from 'next/link'
-import { HiChevronLeft } from 'react-icons/hi'
-import * as Styled from './styles'
-
 export default function CustomMessage() {
   return (
     <p>ola</p>
