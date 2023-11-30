@@ -3,7 +3,7 @@
 import Button from '@/components/Button'
 import Link from 'next/link'
 import { HiChevronLeft, HiOutlineSun, HiOutlineMoon } from 'react-icons/hi'
-import * as Styled from '../headerTheme/Styles'
+import * as Styled from '../headerTheme/styles'
 import { useContextTheme } from '@/context/theme/context'
 
 export default function HeaderTheme() {

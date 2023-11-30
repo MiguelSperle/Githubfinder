@@ -1,4 +1,4 @@
-import * as Styled from './Styles'
+import * as Styled from './styles'
 import BoxTypography from './home/components/boxTypography/Box-Typography'
 import ImageButton from './home/components/imageButton/Image-Button'
 

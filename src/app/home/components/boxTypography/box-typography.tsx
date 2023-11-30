@@ -3,7 +3,7 @@
 import Button from '@/components/Button'
 import InputWidget from '@/components/Input-Widget'
 import Typography from '@/components/Typography'
-import * as Styled from '../boxTypography/Styles'
+import * as Styled from '../boxTypography/styles'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 

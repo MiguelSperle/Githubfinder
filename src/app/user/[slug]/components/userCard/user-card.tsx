@@ -1,4 +1,4 @@
-import * as Styled from '../userCard/Styles'
+import * as Styled from '../userCard/styles'
 import { UserPropsType } from '@/@types'
 import Typography from '@/components/Typography'
 import Image from 'next/image'

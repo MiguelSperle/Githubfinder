@@ -1,5 +1,5 @@
 import { UserPropsType } from '@/@types'
-import * as Styled from '../userStats/Styles'
+import * as Styled from '../userStats/styles'
 import Link from 'next/link'
 import Typography from '@/components/Typography'
 import Image from 'next/image'

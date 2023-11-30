@@ -1,5 +1,5 @@
 import { RepositoriesType, UserPropsType } from '@/@types'
-import * as Styled from '../userRespositories/Styles'
+import * as Styled from '../userRespositories/styles'
 import Typography from '@/components/Typography'
 import Link from 'next/link'
 import { FetchRepositories } from '@/service/FetchRepositories'
