@@ -23,6 +23,6 @@ export interface RepositoriesType {
   svn_url: string
 }
 
-export interface UserProps {
+export interface UserPropsType {
   user: UserType | null
 }

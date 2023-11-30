@@ -1,5 +1,6 @@
 import { createContext, useState, useContext } from 'react'
-import Cookies from 'js-cookie'
+import { setLocalStorage } from '@/utils/functions/localStorage/SetLocalStorage'
+import { getLocalStorage } from '@/utils/functions/localStorage/GetLocalStorage'
 
 interface PropsContextTheme {
   lightTheme: boolean
@@ -20,15 +21,15 @@ export const ContextThemeProvider = ({
 }: {
   children: React.ReactNode
 }) => {
-  const [lightTheme, setLightTheme] = useState<boolean>(
-    Cookies.get('saveTheme') === 'true',
-  )
-
   function ThemeSwitcher() {
     const valueTheme = !lightTheme
     setLightTheme(valueTheme)
-    Cookies.set('saveTheme', valueTheme.toString())
+    setLocalStorage('saveTheme', valueTheme.toString())
   }
+
+  const [lightTheme, setLightTheme] = useState<boolean>(
+    getLocalStorage('saveTheme') === 'true',
+  )
 
   return (
     <AuthContextTheme.Provider

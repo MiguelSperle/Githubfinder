@@ -3,13 +3,13 @@
 import StyledComponentsRegistry from '@/lib/registry'
 import { StyleSheetManager, ThemeProvider } from 'styled-components'
 import isPropValid from '@emotion/is-prop-valid'
-import { theme } from '@/styles/variables'
-import GlobalStyle from '@/styles/globalStyle'
+import { theme } from '@/styles/Variables'
+import GlobalStyle from '@/styles/GlobalStyle'
 import { useEffect, useState } from 'react'
-import { useContextTheme } from '@/context/theme/context'
+import { useContextTheme } from '@/context/theme/Context'
 
 const StyledComponentsProvider = (props: React.PropsWithChildren) => {
-  const [isMountedLayout, setIsMountedLayout] = useState(false)
+  const [isMountedLayout, setIsMountedLayout] = useState<boolean>(false)
 
   const { lightTheme } = useContextTheme()
 

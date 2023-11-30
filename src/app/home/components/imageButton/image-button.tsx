@@ -1,11 +1,11 @@
 'use client'
 
-import Button from '@/components/button'
+import Button from '@/components/Button'
 import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi'
-import * as Styled from '../imageButton/styles'
+import * as Styled from '../imageButton/Styles'
 import Image from 'next/image'
 import github from '../../../../assets/github.png'
-import { useContextTheme } from '@/context/theme/context'
+import { useContextTheme } from '@/context/theme/Context'
 
 export default function ImageButton() {
   const { lightTheme, ThemeSwitcher } = useContextTheme()

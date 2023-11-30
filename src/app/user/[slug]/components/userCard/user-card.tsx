@@ -1,9 +1,9 @@
-import * as Styled from '../userCard/styles'
-import { UserProps } from '@/@types'
-import Typography from '@/components/typography'
+import * as Styled from '../userCard/Styles'
+import { UserPropsType } from '@/@types'
+import Typography from '@/components/Typography'
 import Image from 'next/image'
 
-export default function UserCard({ user }: UserProps) {
+export default function UserCard({ user }: UserPropsType) {
   return (
     <Styled.ContainerProfile>
       <Image

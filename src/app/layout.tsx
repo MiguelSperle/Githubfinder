@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
-import StyledComponentsProvider from '@/providers/styledComponentsProvider'
+import StyledComponentsProvider from '@/providers/StyledComponentsProvider'
 import { Inter } from 'next/font/google'
 import React from 'react'
-import { ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-import { Providers } from '@/providers/providers'
+import { Providers } from '@/providers/Providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +25,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <StyledComponentsProvider>{children}</StyledComponentsProvider>
-          <ToastContainer />
         </Providers>
       </body>
     </html>

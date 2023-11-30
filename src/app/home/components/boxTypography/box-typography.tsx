@@ -1,38 +1,35 @@
 'use client'
 
-import Button from '@/components/button'
-import InputWidget from '@/components/input-widget'
-import Typography from '@/components/typography'
-import * as Styled from '../boxTypography/styles'
-import Cookies from 'js-cookie'
+import Button from '@/components/Button'
+import InputWidget from '@/components/Input-widget'
+import Typography from '@/components/Typography'
+import * as Styled from '../boxTypography/Styles'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 export default function BoxTypography() {
   const router = useRouter()
 
-  const [user, setUser] = useState<string>('')
+  const [userName, setUserName] = useState<string>('')
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-    setUser(event.target.value)
+    setUserName(event.target.value)
   }
 
   function findUser() {
-    if (user === '') {
+    if (userName === '') {
       return alert('Please enter a username to search')
     }
 
-    Cookies.set('saveUser', user)
-    return router.push(`/user/${user}`)
+    return router.push(`/user/${userName}`)
   }
 
   function findUserOnKeyEnter(event: React.KeyboardEvent<HTMLInputElement>) {
     if (event.key === 'Enter') {
-      if (user === '') {
+      if (userName === '') {
         return alert('Please enter a username to search')
       } else {
-        Cookies.set('saveUser', user)
-        return router.push(`/user/${user}`)
+        return router.push(`/user/${userName}`)
       }
     }
   }

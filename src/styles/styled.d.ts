@@ -1,4 +1,4 @@
-import { theme } from './variables'
+import { theme } from './Variables'
 
 type Colors = typeof theme.darkTheme.colors
 type BreakPoints = typeof theme.darkTheme.breakPoints
@@ -18,8 +18,7 @@ declare module 'styled-components' {
 // type Colors = typeof theme.colors
 // type BreakPoints = typeof theme.breakPoints
 // type FontSizes = typeof theme.fontSizes
-// // type DarkTheme = typeof theme.darkTheme
-// // type LightTheme = typeof theme.lightTheme
+
 // declare module 'styled-components' {
 //   export interface DefaultTheme {
 //     // darkTheme: DarkTheme

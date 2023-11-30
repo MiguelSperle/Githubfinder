@@ -3,13 +3,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-interface TextProps extends React.InputHTMLAttributes<HTMLParagraphElement> {
+interface ParagraphPropsType
+  extends React.InputHTMLAttributes<HTMLParagraphElement> {
   fontSize: string
   fontWeight?: string
   text: string | undefined
 }
 
-const TextComponent = styled.p<TextProps>`
+const TextComponent = styled.p<ParagraphPropsType>`
   // Esse inherit é se casos não passe nada, deixar o valor padrão
   font-size: ${({ fontSize }) => fontSize ?? 'inherit'};
   font-weight: ${({ fontWeight }) => fontWeight ?? 'inherit'};
@@ -20,7 +21,7 @@ export default function Typography({
   fontSize,
   fontWeight,
   ...props
-}: TextProps) {
+}: ParagraphPropsType) {
   return (
     <TextComponent
       text={text}

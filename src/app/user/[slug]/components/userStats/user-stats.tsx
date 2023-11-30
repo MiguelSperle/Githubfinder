@@ -1,10 +1,10 @@
-import { UserProps } from '@/@types'
-import * as Styled from '../userStats/styles'
+import { UserPropsType } from '@/@types'
+import * as Styled from '../userStats/Styles'
 import Link from 'next/link'
-import Typography from '@/components/typography'
+import Typography from '@/components/Typography'
 import Image from 'next/image'
 
-export default function UserStats({ user }: UserProps) {
+export default function UserStats({ user }: UserPropsType) {
   const created = new Date(user?.created_at || '')
   const date = created.toLocaleString()
 

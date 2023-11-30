@@ -3,14 +3,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface InputPropsType extends React.InputHTMLAttributes<HTMLInputElement> {
   width: string
   height: string
   background?: string
   fontSize?: string
 }
 
-const InputComponent = styled.input<InputProps>`
+const InputComponent = styled.input<InputPropsType>`
   // Esse inherit é se casos não passe nada, deixar o valor padrão
   font-size: ${({ fontSize }) => fontSize ?? 'inherit'};
   background: ${({ background }) => background ?? 'inherit'};
@@ -24,7 +24,7 @@ export default function InputWidget({
   background,
   fontSize,
   ...props
-}: InputProps) {
+}: InputPropsType) {
   return (
     <InputComponent
       fontSize={fontSize}

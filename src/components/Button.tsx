@@ -3,14 +3,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonPropsType
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   width: string
   height: string
   fontSize?: string
   background?: string
 }
 
-const ButtonComponent = styled.button<ButtonProps>`
+const ButtonComponent = styled.button<ButtonPropsType>`
   // Esse inherit é se casos não passe nada, deixar o valor padrão
   font-size: ${({ fontSize }) => fontSize ?? 'inherit'};
   height: ${({ height }) => height ?? 'inherit'};
@@ -24,7 +25,7 @@ export default function Button({
   background,
   fontSize,
   ...props
-}: ButtonProps) {
+}: ButtonPropsType) {
   return (
     <ButtonComponent
       fontSize={fontSize}
