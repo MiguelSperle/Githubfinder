@@ -1,5 +1,5 @@
-import CustomMessageNotFound from './components/custom-message-not-found/custom-message'
+import CustomMessage from './components/custom-message-not-found/custom-message'
 
 export default function UserNotFound() {
-  return <CustomMessageNotFound />
+  return <CustomMessage />
 }

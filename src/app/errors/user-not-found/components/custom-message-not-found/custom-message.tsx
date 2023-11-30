@@ -2,9 +2,9 @@ import Button from '@/components/Button'
 import Typography from '@/components/Typography'
 import Link from 'next/link'
 import { HiChevronLeft } from 'react-icons/hi'
-import * as Styled from './styles'
+import * as Styled from '../custom-message-not-found/styles'
 
-export default function CustomMessageNotFound() {
+export default function CustomMessage() {
   return (
     <Styled.ContainerCustomError404>
       <Link href="/">
