@@ -34,7 +34,7 @@ I was able to learn how to create light and dark theme and changed after click i
 ### Links
 
 - Repository: [Click-me](https://github.com/MiguelSperle/githubfinder)
-- Linkedin: [Click-me](#Links)
+- Linkedin: [Click-me](https://www.linkedin.com/in/miguel-sperle-851916298/)
 
 ---------------
 
