@@ -1,6 +1,6 @@
 import * as Styled from './styles'
-import BoxTypography from './home/components/boxTypography/Box-Typography'
-import ImageButton from './home/components/imageButton/Image-Button'
+import BoxTypography from './home/components/boxTypography/box-typography'
+import ImageButton from './home/components/imageButton/image-button'
 
 export default function Home() {
   return (
