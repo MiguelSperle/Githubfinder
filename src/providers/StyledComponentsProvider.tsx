@@ -6,7 +6,7 @@ import isPropValid from '@emotion/is-prop-valid'
 import { theme } from '@/styles/Variables'
 import GlobalStyle from '@/styles/GlobalStyle'
 import { useEffect, useState } from 'react'
-import { useContextTheme } from '@/context/theme/Context'
+import { useContextTheme } from '@/context/theme/context'
 
 const StyledComponentsProvider = (props: React.PropsWithChildren) => {
   const [isMountedLayout, setIsMountedLayout] = useState<boolean>(false)

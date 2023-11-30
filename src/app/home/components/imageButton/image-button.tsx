@@ -5,7 +5,7 @@ import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi'
 import * as Styled from '../imageButton/Styles'
 import Image from 'next/image'
 import github from '../../../../assets/github.png'
-import { useContextTheme } from '@/context/theme/Context'
+import { useContextTheme } from '@/context/theme/context'
 
 export default function ImageButton() {
   const { lightTheme, ThemeSwitcher } = useContextTheme()

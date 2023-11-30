@@ -4,7 +4,7 @@ import Button from '@/components/Button'
 import Link from 'next/link'
 import { HiChevronLeft, HiOutlineSun, HiOutlineMoon } from 'react-icons/hi'
 import * as Styled from '../headerTheme/Styles'
-import { useContextTheme } from '@/context/theme/Context'
+import { useContextTheme } from '@/context/theme/context'
 
 export default function HeaderTheme() {
   const { ThemeSwitcher, lightTheme } = useContextTheme()
