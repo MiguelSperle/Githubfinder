@@ -1,8 +1,8 @@
 'use client'
 
-import Button from '@/components/Button'
+import Button from '@/components/button'
 import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi'
-import * as Styled from '../imageButton/Styles'
+import * as Styled from '../imageButton/styles'
 import Image from 'next/image'
 import github from '../../../../assets/github.png'
 import { useContextTheme } from '@/context/theme/context'

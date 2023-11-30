@@ -3,8 +3,8 @@
 import StyledComponentsRegistry from '@/lib/registry'
 import { StyleSheetManager, ThemeProvider } from 'styled-components'
 import isPropValid from '@emotion/is-prop-valid'
-import { theme } from '@/styles/Variables'
-import GlobalStyle from '@/styles/GlobalStyle'
+import { theme } from '@/styles/variables'
+import GlobalStyle from '@/styles/globalStyle'
 import { useEffect, useState } from 'react'
 import { useContextTheme } from '@/context/theme/context'
 

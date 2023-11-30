@@ -1,9 +1,9 @@
 'use client'
 
-import Button from '@/components/Button'
-import InputWidget from '@/components/Input-widget'
-import Typography from '@/components/Typography'
-import * as Styled from '../boxTypography/Styles'
+import Button from '@/components/button'
+import InputWidget from '@/components/input-widget'
+import Typography from '@/components/typography'
+import * as Styled from '../boxTypography/styles'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 

@@ -1,8 +1,8 @@
 import { RepositoriesType, UserPropsType } from '@/@types'
-import * as Styled from '../userRespositories/Styles'
-import Typography from '@/components/Typography'
+import * as Styled from '../userRespositories/styles'
+import Typography from '@/components/typography'
 import Link from 'next/link'
-import { FetchRepositories } from '@/service/FetchRepositories'
+import { FetchRepositories } from '@/service/fetchRepositories'
 
 export default async function UserRepositories({ user }: UserPropsType) {
   const repos = await FetchRepositories({
