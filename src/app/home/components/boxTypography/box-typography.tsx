@@ -2,7 +2,7 @@
 
 import Button from '@/components/button'
 import InputWidget from '@/components/input-widget'
-import Typography from '../../../../components/typography'
+import Typography from '@/components/typography'
 import * as Styled from '../boxTypography/styles'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'

@@ -1,6 +1,6 @@
 'use client'
 
-import Button from '../../../../../components/button'
+import Button from '@/components/button'
 import Link from 'next/link'
 import { HiChevronLeft, HiOutlineSun, HiOutlineMoon } from 'react-icons/hi'
 import * as Styled from '../headerTheme/styles'
