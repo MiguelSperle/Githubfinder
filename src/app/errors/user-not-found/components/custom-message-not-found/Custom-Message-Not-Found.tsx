@@ -1,5 +1,5 @@
 import Button from '@/components/button'
-import Typography from '@/components/typography'
+import Typography from '../../../../../components/typography'
 import Link from 'next/link'
 import { HiChevronLeft } from 'react-icons/hi'
 import * as Styled from './styles'
