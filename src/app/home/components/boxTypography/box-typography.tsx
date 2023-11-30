@@ -1,7 +1,7 @@
 'use client'
 
 import Button from '@/components/Button'
-import InputWidget from '@/components/Input-Widget'
+import InputWidget from '@/components/input-widget'
 import Typography from '@/components/Typography'
 import * as Styled from '../boxTypography/styles'
 import { useRouter } from 'next/navigation'
