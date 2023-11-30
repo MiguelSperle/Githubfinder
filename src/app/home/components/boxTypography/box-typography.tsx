@@ -36,12 +36,13 @@ export default function BoxTypography() {
 
   return (
     <Styled.BoxTypography>
-      <Typography
+      <p>Github Finder</p>
+      {/* <Typography
         text="Github Finder"
         fontSize="3.5rem"
         fontWeight="300"
         className="name-main"
-      />
+      /> */}
       <div
         style={{
           display: 'flex',
@@ -50,14 +51,16 @@ export default function BoxTypography() {
         }}
         className="boxText"
       >
-        <Typography
+        <p>Enter path the user ex: </p>
+        {/* <Typography
           text="Enter path the user ex: "
           fontSize="0.9rem"
           fontWeight="200"
-        />
+        /> */}
 
         <div style={{ display: 'flex', flexDirection: 'row' }}>
-          <Typography text="github.com/" fontSize="0.9rem" fontWeight="200" />
+          <p>github.com/</p>
+          {/* <Typography text="github.com/" fontSize="0.9rem" fontWeight="200" /> */}
 
           <span style={{ color: '#006dff', fontWeight: 300 }}>
             MiguelSperle
@@ -65,7 +68,8 @@ export default function BoxTypography() {
         </div>
       </div>
       <Styled.BoxSearch>
-        <InputWidget
+        <input type="text" className="input-widget" />
+        {/* <InputWidget
           type="type"
           width="250px"
           height="54px"
@@ -74,9 +78,11 @@ export default function BoxTypography() {
           className="input-widget"
           onChange={handleChange}
           onKeyDown={findUserOnKeyEnter}
-        />
-
-        <Button
+        /> */}
+        <button type="submit" className="button-find">
+          find
+        </button>
+        {/* <Button
           type="submit"
           width="150px"
           height="50px"
@@ -85,7 +91,7 @@ export default function BoxTypography() {
           onClick={findUser}
         >
           Find
-        </Button>
+        </Button> */}
       </Styled.BoxSearch>
     </Styled.BoxTypography>
   )

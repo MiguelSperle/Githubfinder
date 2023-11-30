@@ -12,17 +12,17 @@ export default function HeaderTheme() {
   return (
     <Styled.ContainerButtonBack>
       <Link href="/">
-        <Button
+        {/* <Button
           width="50px"
           height="50px"
           fontSize="1.5rem"
           className="button-chevron-left"
         >
           <HiChevronLeft />
-        </Button>
+        </Button> */}
       </Link>
 
-      <Button
+      {/* <Button
         type="submit"
         width="50px"
         height="50px"
@@ -31,7 +31,7 @@ export default function HeaderTheme() {
         onClick={ThemeSwitcher}
       >
         {lightTheme ? <HiOutlineSun /> : <HiOutlineMoon />}
-      </Button>
+      </Button> */}
     </Styled.ContainerButtonBack>
   )
 }

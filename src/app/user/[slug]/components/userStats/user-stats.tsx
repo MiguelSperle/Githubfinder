@@ -19,11 +19,11 @@ export default function UserStats({ user }: UserPropsType) {
           target="_blank"
         >{`github.com/${user?.login}`}</Link>
 
-        <Typography text={user?.name} fontSize="1.5rem" />
+        {/* <Typography text={user?.name} fontSize="1.5rem" />
         <Typography text={user?.bio} fontSize="0.8rem" />
         <Typography text={`Followers: ${user?.followers}`} fontSize="0.8rem" />
         <Typography text={`Following: ${user?.following}`} fontSize="0.8rem" />
-        <Typography text={`Created: ${date}`} fontSize="0.8rem" />
+        <Typography text={`Created: ${date}`} fontSize="0.8rem" /> */}
       </Styled.ContainerInfoUser>
 
       <Image

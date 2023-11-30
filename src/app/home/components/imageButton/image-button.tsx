@@ -12,7 +12,7 @@ export default function ImageButton() {
 
   return (
     <Styled.ContainerImageButton>
-      <Button
+      {/* <Button
         type="submit"
         width="70px"
         height="50px"
@@ -21,7 +21,7 @@ export default function ImageButton() {
         onClick={ThemeSwitcher}
       >
         {lightTheme ? <HiOutlineSun /> : <HiOutlineMoon />}
-      </Button>
+      </Button> */}
       <Image
         className="image-main"
         width={600}
