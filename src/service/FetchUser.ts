@@ -9,7 +9,7 @@ export async function FetchUser(name: string) {
   })
 
   if (!response.ok && response.status === 404) {
-    return redirect('/errors/user-not-found')
+    return redirect('/user-not-found')
   }
 
   if (!response.ok && response.status === 403) {
