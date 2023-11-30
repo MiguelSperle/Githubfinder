@@ -13,7 +13,7 @@ export function middleware(request: NextRequest) {
   }
 
   if (
-    request.nextUrl.pathname.startsWith('/errors') &&
+    request.nextUrl.pathname.startsWith('/user-not-found') &&
     !request.headers.get('Referer')
     // Sobre esse (Referer) é o seguinte, se o usuario alterar diretamente na url, o (Referer) não vai retornar a rota que tava, nesse caso ai a (/user)
     // E com isso, se !request.headers... significa que ele nao veio de uma page, logicamente usuario tentou acessar uma rota pela url, então eu mando pra (/)
@@ -26,5 +26,5 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   // intercptando essa rota
-  matcher: ['/user/:path*', '/errors/:path*', '/:path*'], // rotas que vou intercptar
+  matcher: ['/user/:path*', '/:path*'], // rotas que vou intercptar
 }

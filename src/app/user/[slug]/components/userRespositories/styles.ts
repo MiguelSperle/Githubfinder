@@ -48,7 +48,7 @@ export const ContainerRepository = styled.div`
 
   a {
     font-size: 0.8rem;
-    color: #f1f1f1;
+    color: ${({ theme }) => theme.colors.text.primary};
     text-decoration: underline;
   }
 
