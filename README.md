@@ -33,7 +33,7 @@ I was able to learn how to create light and dark theme and changed after click i
 
 ### Links
 
-- Repository: [Click-me](https://github.com/MiguelSperle/githubfinder)
+- Repository: [Click-me](https://github.com/MiguelSperle/Githubfinder)
 - Linkedin: [Click-me](https://www.linkedin.com/in/miguel-sperle-851916298/)
 
 ---------------
@@ -44,13 +44,13 @@ I was able to learn how to create light and dark theme and changed after click i
 ```⌨ Clone the repository```
 
 ```
-git clone https://github.com/MiguelSperle/githubfinder.git
+git clone https://github.com/MiguelSperle/Githubfinder.git
 ```
 
 ```📂 Access at folder```
 
 ```
-cd githubfinder
+cd Githubfinder
 ```
 
 ```📡 Install dependencies```
