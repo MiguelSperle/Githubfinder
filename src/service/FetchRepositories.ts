@@ -6,7 +6,7 @@ export async function FetchRepositories({ user }: UserPropsType) {
   const response = await fetch(
     `https://api.github.com/users/${user.login}/repos`,
     {
-      next: { revalidate: 3600 }, // Até bater esse tempo ele vai usar o cache que foi salvo na primeira fetch, depos que bater o mesmo, ele refaz a chamada e salva novamente em cache e fica nesse ciclo.(A CADA 1 HORA)
+      next: { revalidate: 30 }, // Até bater esse tempo ele vai usar o cache que foi salvo na primeira fetch, depos que bater o mesmo, ele refaz a chamada e salva novamente em cache e fica nesse ciclo.(A CADA 1 HORA)
     },
   )
 
