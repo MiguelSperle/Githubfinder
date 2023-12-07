@@ -19,6 +19,7 @@ Summarizing, in this project, you can search some users and see yours informatio
 <ul>
   <li>Next JS</li>
   <li>TypeScript</li>
+  <li>Axios</li>
   <li>Styled Components</li>
 </ul>
 
