@@ -25,6 +25,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // intercptando essa rota
+  // intercptando essas rotas
   matcher: ['/user/:path*', '/:path*'], // rotas que vou intercptar
 }

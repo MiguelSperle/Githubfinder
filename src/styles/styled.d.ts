@@ -12,19 +12,3 @@ declare module 'styled-components' {
     fontSizes: FontSizes
   }
 }
-
-// import { theme } from './variables'
-
-// type Colors = typeof theme.colors
-// type BreakPoints = typeof theme.breakPoints
-// type FontSizes = typeof theme.fontSizes
-
-// declare module 'styled-components' {
-//   export interface DefaultTheme {
-//     // darkTheme: DarkTheme
-//     // lightTheme: LightTheme
-//     colors: Colors
-//     breakPoints: BreakPoints
-//     fontSizes: FontSizes
-//   }
-// }

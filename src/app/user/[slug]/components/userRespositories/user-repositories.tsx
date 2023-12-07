@@ -2,12 +2,10 @@ import { RepositoriesType, UserPropsType } from '@/@types'
 import * as Styled from '../userRespositories/styles'
 import Typography from '@/components/Typography'
 import Link from 'next/link'
-import { FetchRepositories } from '@/service/FetchRepositories'
+import { FetchRepositoriesService } from '@/service/FetchRepositoriesService'
 
 export default async function UserRepositories({ user }: UserPropsType) {
-  const repos = await FetchRepositories({
-    user,
-  })
+  const repos = await FetchRepositoriesService.GetService({ user })
 
   return (
     <Styled.ContainerRepositories>

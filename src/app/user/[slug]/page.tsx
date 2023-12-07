@@ -6,10 +6,10 @@ import HeaderTheme from './components/headerTheme/header-theme'
 import UserCard from './components/userCard/user-card'
 import UserStats from './components/userStats/user-stats'
 import UserRepositories from './components/userRespositories/user-repositories'
-import { FetchUser } from '@/service/FetchUser'
+import { FetchUserService } from '@/service/FetchUserService'
 
 export default async function User({ params }: NameProps) {
-  const user = await FetchUser(params.slug)
+  const user = await FetchUserService.GetService(params.slug)
 
   return (
     <Styled.ContainerPageUser>

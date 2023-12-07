@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@swc/plugin-styled-components": "^1.5.96",
+    "axios": "^1.6.2",
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18",
